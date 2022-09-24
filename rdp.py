@@ -19,7 +19,7 @@ class CRD:
         os.system("apt update")
         self.installCRD()
         self.installDesktopEnvironment()
-        self.installGoogleChorme()
+        #self.installGoogleChorme()
         self.finish(user)
         print("\nRDP created succesfully move to https://remotedesktop.google.com/access")
     @staticmethod
