@@ -71,8 +71,10 @@ X-GNOME-Autostart-enabled=true""".format(link)
         os.system(f"adduser {user} chrome-remote-desktop")
         os.system("wget -O ~/Pictures/wall.jpg https://w.wallhaven.cc/full/9m/wallhaven-9m7l2k.jpg")
         os.system("xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s ~/Pictures/wall.jpg")
+        os.system(f"export $(dbus-launch)")
         command = f"{CRP} --pin={Pin}"
         os.system(f"su - {user} -c '{command}'")
+       
         os.system("service chrome-remote-desktop start")
         
 
